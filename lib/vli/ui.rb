@@ -14,15 +14,15 @@ module Vli
         @resource = resource
       end
 
-      # [:ask, :warn, :error, :info, :success].each do |method|
-      #   define_method(method) do |message, *opts|
-      #     define_method(method) { |*args| }
-      #   end
-      # end
+      [:ask, :warn, :error, :info, :success].each do |method|
+        define_method(method) do |message, *opts|
+          # maybe log this later
+        end
+      end
 
-      # [:clear_line, :report_progress].each do |method|
-      #   define_method(method) { |*args| }
-      # end
+      [:clear_line, :report_progress].each do |method|
+        define_method(method) { |*args| }
+      end
     end
 
     # This is a UI implementation that does nothing.
